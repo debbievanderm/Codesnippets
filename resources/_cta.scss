@@ -1,0 +1,47 @@
+.cta {
+    font-family: 'open sans';
+    background: #dadada;
+    color: #292929;
+    width: 100%;
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    
+    & .cta--text {
+      padding: 40px;
+      width: 100%;
+      padding-right: 50px;
+      font-size: 18px;
+      line-height: 33px;
+    }
+   
+    & .cta--text-decoration {
+        width: 50px;
+        font-size: 60px;
+        background: #333;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+   & .cta-text-decoration__icon {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+   }
+   
+   & .cta-text-decoration__icon .fa {
+    display: table-cell;
+    vertical-align: middle;
+    }
+ 
+  
+  
+}
+
