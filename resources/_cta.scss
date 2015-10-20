@@ -1,47 +1,83 @@
+// START
+
+//    cta
+//      └── cta--text
+//          └──span
+//          └──span.cta--text-decoration
+//               └──span.cta-text-decoration__icon
+//                      └──.fa-angle-right
+
+// END
+
+
+
+$cta-bg                                           : #dadada;
+$cta--text-color                                  : #292929;
+$cta--text-decoration-bg                          : #656560;
+$cta--text-decoration-color                       : #292929;
+$cta--text-decoration__icon-color                 : #ffffff;
+$cta-bg-hover                                     : #656560;
+$cta--text-color-hover                            : #383838;
+$cta--text-decoration-bg-hover                    : #cbcbcb;
+$brand-color-orange                               : #ff4100;
+
+
 .cta {
-    font-family: 'open sans';
-    background: #dadada;
-    color: #292929;
-    width: 100%;
-    position: relative;
-    top: -1px;
-    display: inline-block;
-    
-    & .cta--text {
-      padding: 40px;
-      width: 100%;
-      padding-right: 50px;
-      font-size: 18px;
-      line-height: 33px;
-    }
-   
-    & .cta--text-decoration {
-        width: 50px;
-        font-size: 60px;
-        background: #333;
-        text-align: center;
-        text-decoration: none;
-        color: #ffffff;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    
-   & .cta-text-decoration__icon {
-    display: table;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-    color: #fff;
-   }
-   
-   & .cta-text-decoration__icon .fa {
-    display: table-cell;
-    vertical-align: middle;
-    }
- 
+  background    : $cta-bg;
+  color         : $cta--text-color;
+  display       : inline-block;
+  position      : relative; /* to hold the cta */
   
-  
+  & .cta--text {
+    padding       : 5px 20px;
+    width         : 100%;
+    padding-right : calc(50px + 20px);
+    font-weight   : 600;
+    font-size     : 16px;
+    line-height   : 33px;
+    color         : $cta--text-color;
+  }
+
+  & .cta--text-decoration {
+    width           : 50px;
+    font-size       : 40px;
+    background      : $cta--text-decoration-bg;
+    text-align      : center;
+    text-decoration : none;
+    color           : $cta--text-decoration-color;
+    height          : 100%;
+    position        : absolute;
+    top             : 0;
+    right           : 0;
+  }
+
+  & .cta-text-decoration__icon {
+    display         : table;
+    height          : 100%;
+    width           : 100%;
+    text-decoration : none;
+    color           : $cta--text-decoration__icon-color;
+  }
+
+  & .cta-text-decoration__icon .fa {
+    display         : table-cell;
+    vertical-align  : middle;
+    position        : relative;
+    left            : 3px;
+  }
 }
 
+
+a:hover {
+  & .cta {
+    background        : $cta--text-decoration-bg-hover;
+
+    .cta--text {
+      color           : $cta--text-color-hover;
+    }
+  }
+
+  & .cta-text-decoration__icon {
+    background      : $brand-color-orange;
+  }
+}

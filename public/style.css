@@ -3,30 +3,30 @@ section {
 }
 
 .cta {
-  font-family: 'open sans';
   background: #dadada;
   color: #292929;
-  width: 100%;
-  position: relative;
-  top: -1px;
   display: inline-block;
+  position: relative;
+  /* to hold the cta */
 }
 
 .cta .cta--text {
-  padding: 40px;
+  padding: 5px 20px;
   width: 100%;
-  padding-right: 50px;
-  font-size: 18px;
+  padding-right: calc(50px + 20px);
+  font-weight: 600;
+  font-size: 16px;
   line-height: 33px;
+  color: #292929;
 }
 
 .cta .cta--text-decoration {
   width: 50px;
-  font-size: 60px;
-  background: #333;
+  font-size: 40px;
+  background: #656560;
   text-align: center;
   text-decoration: none;
-  color: #ffffff;
+  color: #292929;
   height: 100%;
   position: absolute;
   top: 0;
@@ -38,10 +38,24 @@ section {
   height: 100%;
   width: 100%;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
 }
 
 .cta .cta-text-decoration__icon .fa {
   display: table-cell;
   vertical-align: middle;
+  position: relative;
+  left: 3px;
+}
+
+a:hover .cta {
+  background: #cbcbcb;
+}
+
+a:hover .cta .cta--text {
+  color: #383838;
+}
+
+a:hover .cta-text-decoration__icon {
+  background: #ff4100;
 }
